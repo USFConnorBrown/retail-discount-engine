@@ -1,2 +1,2 @@
 # retail-discount-engine
-Coding Challenge 04
+This project is a JavaScript simulation of a retail checkout system that also includes the utilization of dynamic disocunts based on the type of categorgy and customer type. It also will update as each of the customers makes a purchase. My program uses conditonals such as the if, else if, and switch and loops such as for...of and for...in to help with controling the logic and the output types. I have also created a html file that allows you to be able to see the output in a browser to be able to see the console. 

@@ -64,4 +64,3 @@ console.log(`Customer ${i + 1} (${customerTypes[i]}) - Total: $${finalTotal.toFi
         }
         console.log("--------------------");
     }   
-   
