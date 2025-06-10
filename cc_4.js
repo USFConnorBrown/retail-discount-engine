@@ -22,7 +22,6 @@ for (const product of products) {
         default:
             // No discount for other categories
             break;
-}
 product.price = +product.price.toFixed(2); // Format price to 2 decimal places 
 }
 //Step 4: Create a varible customerType and write an if...else if chain to apply an additional discount
@@ -38,4 +37,17 @@ function applyCustomerDiscount(total, customerType) {
         return +total.toFixed(2); // No discount for other customer types
     }
     }
+    //Step 5: Simulate a checkout process for 3 customers
+    const customerTypes = ["regular", "student", "senior"];
+    for (let i = 0; i < 3; i++) {
+        let subtotal = 0;
+        for (const product of products) {
+            subtotal += product.price;
+            product.inventory--; 
+        }
+    }
+    const finalTotal = applyCustomerDiscount(subtotal, customerTypes[i]);
+console.log(`Customer ${i + 1} (${customerTypes[i]}) - Total: $${finalTotal.toFixed(2)}`);
+    }
     
+   
