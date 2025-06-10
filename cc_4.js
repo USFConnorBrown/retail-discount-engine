@@ -19,12 +19,12 @@ for (const product of products) {
         case "household":
             product.price *= 0.90; // 10% discount
             break;
-        default:
-            // No discount for other categories
+        default: // No discount for other categories
             break;
+    }
 product.price = +product.price.toFixed(2); // Format price to 2 decimal places 
 }
-//Step 4: Create a varible customerType and write an if...else if chain to apply an additional discount
+//Step 4: Create a variable customerType and write an if...else if chain to apply an additional discount
 function applyCustomerDiscount(total, customerType) {
     if (customerType === "student") {
         return +(total * 0.95).toFixed(2); // 5% discount for students
@@ -42,6 +42,7 @@ function applyCustomerDiscount(total, customerType) {
     for (let i = 0; i < 3; i++) {
         let subtotal = 0;
         for (const product of products) {
+          if (product.inventory > 0) {
             subtotal += product.price;
             product.inventory--; 
         }
