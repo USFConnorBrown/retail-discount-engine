@@ -23,3 +23,19 @@ for (const product of products) {
             // No discount for other categories
             break;
 }
+product.price = +product.price.toFixed(2); // Format price to 2 decimal places 
+}
+//Step 4: Create a varible customerType and write an if...else if chain to apply an additional discount
+function applyCustomerDiscount(total, customerType) {
+    if (customerType === "student") {
+        return +(total * 0.95).toFixed(2); // 5% discount for students
+    }
+    else if (customerType === "senior") {
+        return +(total * 0.93).toFixed(2); // 7% discount for seniors
+    }
+    else 
+    {
+        return +total.toFixed(2); // No discount for other customer types
+    }
+    }
+    
