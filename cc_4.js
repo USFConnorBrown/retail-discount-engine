@@ -22,8 +22,9 @@ for (const product of products) {
         default: // No discount for other categories
             break;
     }
-product.price = +product.price.toFixed(2); // Format price to 2 decimal places 
+product.price = +product.price.toFixed(2); // Format price to 2 decimal places
 }
+
 //Step 4: Create a variable customerType and write an if...else if chain to apply an additional discount
 function applyCustomerDiscount(total, customerType) {
     if (customerType === "student") {
@@ -32,7 +33,7 @@ function applyCustomerDiscount(total, customerType) {
     else if (customerType === "senior") {
         return +(total * 0.93).toFixed(2); // 7% discount for seniors
     }
-    else 
+    else
     {
         return +total.toFixed(2); // No discount for other customer types
     }
@@ -44,13 +45,13 @@ function applyCustomerDiscount(total, customerType) {
         for (const product of products) {
           if (product.inventory > 0) {
             subtotal += product.price;
-            product.inventory--; 
+            product.inventory--;
         }
     }
     const finalTotal = applyCustomerDiscount(subtotal, customerTypes[i]);
 console.log(`Customer ${i + 1} (${customerTypes[i]}) - Total: $${finalTotal.toFixed(2)}`);
     }
-    //Step 6: Log each key/value pair for a single product after the discounts are applied 
+    //Step 6: Log each key/value pair for a single product after the discounts are applied
    console.log("\nDetails of one product after discounts:");
    const firstProduct = products[0];
    for (const key in firstProduct) {
@@ -63,4 +64,4 @@ console.log(`Customer ${i + 1} (${customerTypes[i]}) - Total: $${finalTotal.toFi
             console.log(`${key}: ${value}`);
         }
         console.log("--------------------");
-    }   
+    }  
