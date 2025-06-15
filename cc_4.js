@@ -49,19 +49,20 @@ function applyCustomerDiscount(total, customerType) {
         }
     }
     const finalTotal = applyCustomerDiscount(subtotal, customerTypes[i]);
-console.log(`Customer ${i + 1} (${customerTypes[i]}) - Total: $${finalTotal.toFixed(2)}`);
+document.writeln(`Customer ${i + 1} (${customerTypes[i]}) - Total: $${finalTotal.toFixed(2)}<br>`);
     }
     //Step 6: Log each key/value pair for a single product after the discounts are applied
-   console.log("\nDetails of one product after discounts:");
+   document.writeln("\nDetails of one product after discounts:<br>");
    const firstProduct = products[0];
    for (const key in firstProduct) {
-       console.log(`${key}: ${firstProduct[key]}`);
+       document.writeln(`${key}: ${firstProduct[key]}<br>`);
    }
    //Step 7: Log all the product info using the Object.entries() and destructuring
-    console.log("\nUpdated product inventory and information:");
+    document.writeln("\nUpdated product inventory and information:<br>");
     for (const product of products) {
         for (const [key, value] of Object.entries(product)) {
-            console.log(`${key}: ${value}`);
+            document.writeln(`${key}: ${value}<br>`);
         }
-        console.log("--------------------");
+        document.writeln("--------------------<br>");
+        console.log(`Product: ${product.name} - Price: $${product.price}, Inventory: ${product.inventory}`);
     }  
